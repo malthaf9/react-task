@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { data } from "./mockData.js"; // Assuming mockData.js contains your data
+import { data } from "./mockData.js"; 
 
 const Data = () => {
   const [selectedRows, setSelectedRows] = useState([]);
@@ -7,7 +7,7 @@ const Data = () => {
 
   // Pagination State
   const [currentPage, setCurrentPage] = useState(1);
-  const rowsPerPage = 5; // Adjust this value as needed
+  const rowsPerPage = 5; 
 
   // Get current rows based on pagination
   const indexOfLastRow = currentPage * rowsPerPage;
@@ -31,7 +31,7 @@ const Data = () => {
   // Handle select all checkboxes
   const handleSelectAllChange = () => {
     if (!selectAll) {
-      const allRowNos = data.map((item) => item.no); // Get all row numbers
+      const allRowNos = data.map((item) => item.no); 
       setSelectedRows(allRowNos);
     } else {
       setSelectedRows([]);
@@ -55,7 +55,6 @@ const Data = () => {
 
   return (
     <div className="p-4">
-      {/* Responsive Table Wrapper */}
       <div className="overflow-x-auto">
         <table className="min-w-full bg-white border border-gray-200">
           <thead>
@@ -108,7 +107,7 @@ const Data = () => {
         </table>
       </div>
 
-      {/* Pagination */}
+      
       <div className="flex flex-wrap justify-center mt-4 space-x-2">
         <button
           className="px-3 py-2 bg-gray-200 rounded-md"
