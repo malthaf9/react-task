@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: react-task
+  labels:
+    app: react-task
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: react-task
+  template:
+    metadata:
+      labels:
+        app: react-task
+    spec:
+      containers:
+      - name: react-task
+        image: althaf24/my-react-app:v1.0
+        ports:
+        - containerPort: 3000
+
